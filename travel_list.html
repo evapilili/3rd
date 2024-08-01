@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Logs</title>
+</head>
+<body>
+    <h1>Travel Logs</h1>
+    <ul>
+        {% for travel in travels %}
+            <li><a href="{% url 'travel_detail' travel.pk %}">{{ travel.title }}</a> by {{ travel.user.username }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'travel_create' %}">Add New Travel Log</a>
+</body>
+</html>

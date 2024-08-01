@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ travel.title }}</title>
+</head>
+<body>
+    <h1>{{ travel.title }}</h1>
+    <p><strong>Location:</strong> {{ travel.location }}</p>
+    <p><strong>Geolocation:</strong> {{ travel.geolocation }}</p>
+    <p><strong>Cost:</strong> ${{ travel.cost }}</p>
+    <p><strong>Description:</strong> {{ travel.description }}</p>
+    <p><strong>Heritage Sites:</strong> {{ travel.heritage_sites }}</p>
+    <p><strong>Places to Visit:</strong> {{ travel.places_to_visit }}</p>
+    <p><strong>Convenience Rating:</strong> {{ travel.convenience_rating }}</p>
+    <p><strong>Safety Rating:</strong> {{ travel.safety_rating }}</p>
+    <p><strong>Population Density Rating:</strong> {{ travel.population_density_rating }}</p>
+    <p><strong>Vegetation Rating:</strong> {{ travel.vegetation_rating }}</p>
+    {% if travel.image %}
+        <img src="{{ travel.image.url }}" alt="Image of {{ travel.title }}">
+    {% endif %}
+</body>
+</html>
